@@ -1,0 +1,123 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace OpenDMA.Api
+{
+
+    /// <summary>
+    /// Represents a qualified name in OpenDMA, consisting of a namespace and a name.
+    /// Both the namespace and the name must not be null or empty, and they are immutable after creation.
+    /// This class is designed to be immutable and thread-safe.
+    /// </summary>
+    public sealed class OdmaQName
+    {
+
+        /// <summary>
+        /// Gets the namespace part of the qualified name.
+        /// </summary>
+        public string Namespace { get; }
+
+        /// <summary>
+        /// Gets the name part of the qualified name.
+        /// </summary>
+        public string Name { get; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OdmaQName"/> class with the specified namespace and name.
+        /// </summary>
+        /// <param name="namespace">The namespace part of the qualified name. Must not be null or empty.</param>
+        /// <param name="name">The name part of the qualified name. Must not be null or empty.</param>
+        /// <exception cref="ArgumentException">Thrown when the namespace or name is null or empty.</exception>
+        public OdmaQName(string ns, string name)
+        {
+            if (string.IsNullOrWhiteSpace(ns))
+            {
+                throw new ArgumentException("Namespace must not be null or empty", nameof(ns));
+            }
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentException("Name must not be null or empty", nameof(name));
+            }
+            if (name.Contains(":"))
+            {
+                throw new ArgumentException("Name must not contain colon ':' character", nameof(name));
+            }
+            if (ns.StartsWith(":") || ns.EndsWith(":") || ns.Contains("::"))
+            {
+                throw new ArgumentException("Segments in Namespace must have at least 1 character", nameof(ns));
+            }
+            Namespace = ns;
+            Name = name;
+        }
+
+        /// <summary>
+        /// Determines whether the specified object is equal to the current object.
+        /// Two <see cref="OdmaQName"/> objects are considered equal if their namespace and name are both equal.
+        /// </summary>
+        /// <param name="obj">The object to compare with the current object.</param>
+        /// <returns>
+        /// <c>true</c> if the specified object is equal to the current object; otherwise, <c>false</c>.
+        /// </returns>
+        public override bool Equals(object? obj)
+        {
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+            if (obj == null || obj.GetType() != this.GetType())
+            {
+                return false;
+            }
+            OdmaQName other = (OdmaQName)obj;
+            return Namespace == other.Namespace && Name == other.Name;
+        }
+
+        /// <summary>
+        /// Serves as the default hash function.
+        /// The hash code is based on both the namespace and the name.
+        /// </summary>
+        /// <returns>A hash code for the current object.</returns>
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Namespace, Name);
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// The format is "namespace:name".
+        /// </summary>
+        /// <returns>A string that represents the current object.</returns>
+        public override string ToString()
+        {
+            return $"{Namespace}:{Name}";
+        }
+
+        /// <summary>
+        /// Parses a string representation of a qualified name into an <see cref="OdmaQName"/>.
+        /// </summary>
+        /// <param name="qname">The string to parse, in the format "namespace:name".</param>
+        /// <returns>An <see cref="OdmaQName"/> object with parsed namespace and name.</returns>
+        /// <exception cref="ArgumentException">Thrown if the input does not contain a valid string representation of a qualified name.</exception>
+        public static OdmaQName FromString(string qname)
+        {
+            if (string.IsNullOrWhiteSpace(qname))
+            {
+                throw new ArgumentException("Qualified name must not be null or empty", nameof(qname));
+            }
+
+            int lastColonIndex = qname.LastIndexOf(':');
+            if (lastColonIndex == -1)
+            {
+                throw new ArgumentException("Qualified name must contain at least one colon", nameof(qname));
+            }
+
+            string ns = qname.Substring(0, lastColonIndex);
+            string name = qname.Substring(lastColonIndex + 1);
+
+            return new OdmaQName(ns, name);
+        }
+
+    }
+
+}
