@@ -146,10 +146,10 @@ namespace OpenDMA.Api
         /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_CHECKEDOUTBY).GetString()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_CHECKEDOUTBY).Value</c>.
         /// 
         /// Property opendma:CheckedOutBy: String
-        /// [SingleValue] [ReadOnly] [Required]
+        /// [SingleValue] [ReadOnly] [Optional]
         /// Full description follows.
         /// </summary>
-        string CheckedOutBy { get; }
+        string? CheckedOutBy { get; }
 
     }
 
