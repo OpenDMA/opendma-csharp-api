@@ -255,14 +255,14 @@ namespace OpenDMA.Api
                         throw new OdmaInvalidDataTypeException("This property has a multi-valued DateTime data type. It can only be set to values assignable to `IList<DateTime>`");
                     }
                     break;
-                case OdmaType.BLOB:
+                case OdmaType.BINARY:
                     if(newValue is IList<byte[]>)
                     {
                         _value = newValue;
                     }
                     else
                     {
-                        throw new OdmaInvalidDataTypeException("This property has a multi-valued Blob data type. It can only be set to values assignable to `IList<byte[]>`");
+                        throw new OdmaInvalidDataTypeException("This property has a multi-valued Binary data type. It can only be set to values assignable to `IList<byte[]>`");
                     }
                     break;
                 case OdmaType.REFERENCE:
@@ -393,14 +393,14 @@ namespace OpenDMA.Api
                         throw new OdmaInvalidDataTypeException("This property has a single-valued DateTime data type. It can only be set to values assignable to `DateTime?`");
                     }
                     break;
-                case OdmaType.BLOB:
+                case OdmaType.BINARY:
                     if(newValue is byte[])
                     {
                         _value = newValue;
                     }
                     else
                     {
-                        throw new OdmaInvalidDataTypeException("This property has a single-valued Blob data type. It can only be set to values assignable to `byte[]?`");
+                        throw new OdmaInvalidDataTypeException("This property has a single-valued Binary data type. It can only be set to values assignable to `byte[]?`");
                     }
                     break;
                 case OdmaType.REFERENCE:
@@ -635,25 +635,25 @@ namespace OpenDMA.Api
         }
 
         /// <summary>
-        /// Retrieves the Blob value of this property if and only if
-        /// the data type of this property is a single valued Blob.
+        /// Retrieves the Binary value of this property if and only if
+        /// the data type of this property is a single valued Binary.
         /// </summary>
         /// <returns>
         /// The byte[]? value of this property
         /// </returns>
         /// <exception cref="OdmaInvalidDataTypeException">
-        /// Thrown if the data type of this property is not a single-valued Blob.
+        /// Thrown if the data type of this property is not a single-valued Binary.
         /// </exception>
-        public byte[]? GetBlob()
+        public byte[]? GetBinary()
         {
-            if( (_multiValue == false) && (_type == OdmaType.BLOB) )
+            if( (_multiValue == false) && (_type == OdmaType.BINARY) )
             {
                 EnforceValue();
                 return (byte[]?)_value;
             }
             else
             {
-                throw new OdmaInvalidDataTypeException("This property has a different data type and/or cardinality. It cannot return values with `GetBlob()`");
+                throw new OdmaInvalidDataTypeException("This property has a different data type and/or cardinality. It cannot return values with `GetBinary()`");
             }
         }
 
@@ -998,25 +998,25 @@ namespace OpenDMA.Api
         }
 
         /// <summary>
-        /// Retrieves the Blob value of this property if and only if
-        /// the data type of this property is a multi valued Blob.
+        /// Retrieves the Binary value of this property if and only if
+        /// the data type of this property is a multi valued Binary.
         /// </summary>
         /// <returns>
         /// The IList<byte[]> value of this property
         /// </returns>
         /// <exception cref="OdmaInvalidDataTypeException">
-        /// Thrown if the data type of this property is not a multi-valued Blob.
+        /// Thrown if the data type of this property is not a multi-valued Binary.
         /// </exception>
-        public IList<byte[]> GetBlobList()
+        public IList<byte[]> GetBinaryList()
         {
-            if( (_multiValue == true) && (_type == OdmaType.BLOB) )
+            if( (_multiValue == true) && (_type == OdmaType.BINARY) )
             {
                 EnforceValue();
                 return _value is IList<byte[]> ret ? ret : throw new InvalidOperationException("Implementation error.");
             }
             else
             {
-                throw new OdmaInvalidDataTypeException("This property has a different data type and/or cardinality. It cannot return values with `GetBlobList()`");
+                throw new OdmaInvalidDataTypeException("This property has a different data type and/or cardinality. It cannot return values with `GetBinaryList()`");
             }
         }
 

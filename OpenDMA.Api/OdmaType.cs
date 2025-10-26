@@ -16,7 +16,7 @@ namespace OpenDMA.Api
         DOUBLE = 6,
         BOOLEAN = 7,
         DATETIME = 8,
-        BLOB = 9,
+        BINARY = 9,
         REFERENCE = 10,
         CONTENT = 11,
         ID = 100,

@@ -78,8 +78,8 @@ namespace OpenDMA.Api
             PROPERTY_DICT["set_BooleanValue"] = new PropertyMapping(OdmaCommonNames.PROPERTY_BOOLEANVALUE, OdmaType.BOOLEAN, false);
             PROPERTY_DICT["get_DateTimeValue"] = new PropertyMapping(OdmaCommonNames.PROPERTY_DATETIMEVALUE, OdmaType.DATETIME, false);
             PROPERTY_DICT["set_DateTimeValue"] = new PropertyMapping(OdmaCommonNames.PROPERTY_DATETIMEVALUE, OdmaType.DATETIME, false);
-            PROPERTY_DICT["get_BlobValue"] = new PropertyMapping(OdmaCommonNames.PROPERTY_BLOBVALUE, OdmaType.BLOB, false);
-            PROPERTY_DICT["set_BlobValue"] = new PropertyMapping(OdmaCommonNames.PROPERTY_BLOBVALUE, OdmaType.BLOB, false);
+            PROPERTY_DICT["get_BinaryValue"] = new PropertyMapping(OdmaCommonNames.PROPERTY_BINARYVALUE, OdmaType.BINARY, false);
+            PROPERTY_DICT["set_BinaryValue"] = new PropertyMapping(OdmaCommonNames.PROPERTY_BINARYVALUE, OdmaType.BINARY, false);
             PROPERTY_DICT["get_ReferenceValue"] = new PropertyMapping(OdmaCommonNames.PROPERTY_REFERENCEVALUE, OdmaType.REFERENCE, false);
             PROPERTY_DICT["set_ReferenceValue"] = new PropertyMapping(OdmaCommonNames.PROPERTY_REFERENCEVALUE, OdmaType.REFERENCE, false);
             PROPERTY_DICT["get_RootClass"] = new PropertyMapping(OdmaCommonNames.PROPERTY_ROOTCLASS, OdmaType.REFERENCE, false);
@@ -227,8 +227,8 @@ namespace OpenDMA.Api
                     return property.GetBooleanList();
                 case OdmaType.DATETIME:
                     return property.GetDateTimeList();
-                case OdmaType.BLOB:
-                    return property.GetBlobList();
+                case OdmaType.BINARY:
+                    return property.GetBinaryList();
                 case OdmaType.REFERENCE:
                     return property.GetReferenceEnumerable();
                 case OdmaType.CONTENT:
@@ -262,8 +262,8 @@ namespace OpenDMA.Api
                     return property.GetBoolean();
                 case OdmaType.DATETIME:
                     return property.GetDateTime();
-                case OdmaType.BLOB:
-                    return property.GetBlob();
+                case OdmaType.BINARY:
+                    return property.GetBinary();
                 case OdmaType.REFERENCE:
                     return property.GetReference();
                 case OdmaType.CONTENT:

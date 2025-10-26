@@ -193,16 +193,16 @@ namespace OpenDMA.Api
         DateTime? GetDateTime();
 
         /// <summary>
-        /// Retrieves the Blob value of this property if and only if
-        /// the data type of this property is a single valued Blob.
+        /// Retrieves the Binary value of this property if and only if
+        /// the data type of this property is a single valued Binary.
         /// </summary>
         /// <returns>
         /// The byte[]? value of this property
         /// </returns>
         /// <exception cref="OdmaInvalidDataTypeException">
-        /// Thrown if the data type of this property is not a single-valued Blob.
+        /// Thrown if the data type of this property is not a single-valued Binary.
         /// </exception>
-        byte[]? GetBlob();
+        byte[]? GetBinary();
 
         /// <summary>
         /// Retrieves the Reference value of this property if and only if
@@ -363,16 +363,16 @@ namespace OpenDMA.Api
         IList<DateTime> GetDateTimeList();
 
         /// <summary>
-        /// Retrieves the Blob value of this property if and only if
-        /// the data type of this property is a multi valued Blob.
+        /// Retrieves the Binary value of this property if and only if
+        /// the data type of this property is a multi valued Binary.
         /// </summary>
         /// <returns>
         /// The IList<byte[]> value of this property
         /// </returns>
         /// <exception cref="OdmaInvalidDataTypeException">
-        /// Thrown if the data type of this property is not a multi-valued Blob.
+        /// Thrown if the data type of this property is not a multi-valued Binary.
         /// </exception>
-        IList<byte[]> GetBlobList();
+        IList<byte[]> GetBinaryList();
 
         /// <summary>
         /// Retrieves the Reference value of this property if and only if

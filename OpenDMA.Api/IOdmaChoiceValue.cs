@@ -105,14 +105,14 @@ namespace OpenDMA.Api
         DateTime? DateTimeValue { get; set; }
 
         /// <summary>
-        /// The BLOB value of this choice or null, if the property info this choice is assigned to is not of data type BLOB.<br/>
-        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_BLOBVALUE).GetBlob()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_BLOBVALUE).Value</c>.
+        /// The Binary value of this choice or null, if the property info this choice is assigned to is not of data type Binary.<br/>
+        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_BINARYVALUE).GetBinary()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_BINARYVALUE).Value</c>.
         /// 
-        /// Property opendma:BlobValue: Blob
+        /// Property opendma:BinaryValue: Binary
         /// [SingleValue] [Writable] [Optional]
         /// Full description follows.
         /// </summary>
-        byte[]? BlobValue { get; set; }
+        byte[]? BinaryValue { get; set; }
 
         /// <summary>
         /// The Reference value of this choice or null, if the property info this choice is assigned to is not of data type Reference.<br/>

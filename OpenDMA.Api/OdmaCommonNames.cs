@@ -137,8 +137,8 @@ namespace OpenDMA.Api
         /// <summary>qualified name of the OpenDMA system property <c>DateTimeValue</c><summary>
         public static readonly OdmaQName PROPERTY_DATETIMEVALUE = new OdmaQName("opendma", "DateTimeValue");
 
-        /// <summary>qualified name of the OpenDMA system property <c>BlobValue</c><summary>
-        public static readonly OdmaQName PROPERTY_BLOBVALUE = new OdmaQName("opendma", "BlobValue");
+        /// <summary>qualified name of the OpenDMA system property <c>BinaryValue</c><summary>
+        public static readonly OdmaQName PROPERTY_BINARYVALUE = new OdmaQName("opendma", "BinaryValue");
 
         /// <summary>qualified name of the OpenDMA system property <c>ReferenceValue</c><summary>
         public static readonly OdmaQName PROPERTY_REFERENCEVALUE = new OdmaQName("opendma", "ReferenceValue");
