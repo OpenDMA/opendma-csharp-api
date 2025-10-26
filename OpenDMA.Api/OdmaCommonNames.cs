@@ -55,9 +55,6 @@ namespace OpenDMA.Api
         /// <summary>qualified name of the OpenDMA system property <c>Aspect</c><summary>
         public static readonly OdmaQName PROPERTY_ASPECT = new OdmaQName("opendma", "Aspect");
 
-        /// <summary>qualified name of the OpenDMA system property <c>Instantiable</c><summary>
-        public static readonly OdmaQName PROPERTY_INSTANTIABLE = new OdmaQName("opendma", "Instantiable");
-
         /// <summary>qualified name of the OpenDMA system property <c>Hidden</c><summary>
         public static readonly OdmaQName PROPERTY_HIDDEN = new OdmaQName("opendma", "Hidden");
 

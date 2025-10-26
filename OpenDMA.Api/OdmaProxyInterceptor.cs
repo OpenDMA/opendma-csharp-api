@@ -42,8 +42,6 @@ namespace OpenDMA.Api
             PROPERTY_DICT["get_DeclaredProperties"] = new PropertyMapping(OdmaCommonNames.PROPERTY_DECLAREDPROPERTIES, OdmaType.REFERENCE, true);
             PROPERTY_DICT["get_Properties"] = new PropertyMapping(OdmaCommonNames.PROPERTY_PROPERTIES, OdmaType.REFERENCE, true);
             PROPERTY_DICT["get_Aspect"] = new PropertyMapping(OdmaCommonNames.PROPERTY_ASPECT, OdmaType.BOOLEAN, false);
-            PROPERTY_DICT["get_Instantiable"] = new PropertyMapping(OdmaCommonNames.PROPERTY_INSTANTIABLE, OdmaType.BOOLEAN, false);
-            PROPERTY_DICT["set_Instantiable"] = new PropertyMapping(OdmaCommonNames.PROPERTY_INSTANTIABLE, OdmaType.BOOLEAN, false);
             PROPERTY_DICT["get_Hidden"] = new PropertyMapping(OdmaCommonNames.PROPERTY_HIDDEN, OdmaType.BOOLEAN, false);
             PROPERTY_DICT["set_Hidden"] = new PropertyMapping(OdmaCommonNames.PROPERTY_HIDDEN, OdmaType.BOOLEAN, false);
             PROPERTY_DICT["get_System"] = new PropertyMapping(OdmaCommonNames.PROPERTY_SYSTEM, OdmaType.BOOLEAN, false);

@@ -6,7 +6,7 @@ namespace OpenDMA.Api
 {
 
     /// <summary>
-    /// A ContentElement represents one atomic content element the Documents are made of. This abstract (non instantiable) base class defines the type of content and the position of this element in the sequence of all content elements.
+    /// A ContentElement represents one atomic content element the Documents are made of. This base class defines the type of content and the position of this element in the sequence of all content elements.
     /// </summary>
     public interface IOdmaContentElement : IOdmaObject
     {

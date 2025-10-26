@@ -94,15 +94,6 @@ namespace OpenDMA.Api
         bool Aspect { get; }
 
         /// <summary>
-        /// Indicates if there can ob objects of this class (true) or if this class is abstract (false).<br/>
-        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_INSTANTIABLE).GetBoolean()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_INSTANTIABLE).Value</c>.
-        /// 
-        /// Property opendma:Instantiable: Boolean
-        /// [SingleValue] [Writable] [Required]
-        /// </summary>
-        bool Instantiable { get; set; }
-
-        /// <summary>
         /// Indicates if this class should be hidden from end users and probably administrators.<br/>
         /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_HIDDEN).GetBoolean()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_HIDDEN).Value</c>.
         /// 
