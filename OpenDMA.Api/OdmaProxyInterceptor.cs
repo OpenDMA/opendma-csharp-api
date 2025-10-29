@@ -83,6 +83,10 @@ namespace OpenDMA.Api
             PROPERTY_DICT["get_RootClass"] = new PropertyMapping(OdmaCommonNames.PROPERTY_ROOTCLASS, OdmaType.REFERENCE, false);
             PROPERTY_DICT["get_RootAspects"] = new PropertyMapping(OdmaCommonNames.PROPERTY_ROOTASPECTS, OdmaType.REFERENCE, true);
             PROPERTY_DICT["get_RootFolder"] = new PropertyMapping(OdmaCommonNames.PROPERTY_ROOTFOLDER, OdmaType.REFERENCE, false);
+            PROPERTY_DICT["get_CreatedAt"] = new PropertyMapping(OdmaCommonNames.PROPERTY_CREATEDAT, OdmaType.DATETIME, false);
+            PROPERTY_DICT["get_CreatedBy"] = new PropertyMapping(OdmaCommonNames.PROPERTY_CREATEDBY, OdmaType.STRING, false);
+            PROPERTY_DICT["get_LastModifiedAt"] = new PropertyMapping(OdmaCommonNames.PROPERTY_LASTMODIFIEDAT, OdmaType.DATETIME, false);
+            PROPERTY_DICT["get_LastModifiedBy"] = new PropertyMapping(OdmaCommonNames.PROPERTY_LASTMODIFIEDBY, OdmaType.STRING, false);
             PROPERTY_DICT["get_Title"] = new PropertyMapping(OdmaCommonNames.PROPERTY_TITLE, OdmaType.STRING, false);
             PROPERTY_DICT["set_Title"] = new PropertyMapping(OdmaCommonNames.PROPERTY_TITLE, OdmaType.STRING, false);
             PROPERTY_DICT["get_Version"] = new PropertyMapping(OdmaCommonNames.PROPERTY_VERSION, OdmaType.STRING, false);
@@ -94,10 +98,6 @@ namespace OpenDMA.Api
             PROPERTY_DICT["set_CombinedContentType"] = new PropertyMapping(OdmaCommonNames.PROPERTY_COMBINEDCONTENTTYPE, OdmaType.STRING, false);
             PROPERTY_DICT["get_PrimaryContentElement"] = new PropertyMapping(OdmaCommonNames.PROPERTY_PRIMARYCONTENTELEMENT, OdmaType.REFERENCE, false);
             PROPERTY_DICT["set_PrimaryContentElement"] = new PropertyMapping(OdmaCommonNames.PROPERTY_PRIMARYCONTENTELEMENT, OdmaType.REFERENCE, false);
-            PROPERTY_DICT["get_CreatedAt"] = new PropertyMapping(OdmaCommonNames.PROPERTY_CREATEDAT, OdmaType.DATETIME, false);
-            PROPERTY_DICT["get_CreatedBy"] = new PropertyMapping(OdmaCommonNames.PROPERTY_CREATEDBY, OdmaType.STRING, false);
-            PROPERTY_DICT["get_LastModifiedAt"] = new PropertyMapping(OdmaCommonNames.PROPERTY_LASTMODIFIEDAT, OdmaType.DATETIME, false);
-            PROPERTY_DICT["get_LastModifiedBy"] = new PropertyMapping(OdmaCommonNames.PROPERTY_LASTMODIFIEDBY, OdmaType.STRING, false);
             PROPERTY_DICT["get_CheckedOut"] = new PropertyMapping(OdmaCommonNames.PROPERTY_CHECKEDOUT, OdmaType.BOOLEAN, false);
             PROPERTY_DICT["get_CheckedOutAt"] = new PropertyMapping(OdmaCommonNames.PROPERTY_CHECKEDOUTAT, OdmaType.DATETIME, false);
             PROPERTY_DICT["get_CheckedOutBy"] = new PropertyMapping(OdmaCommonNames.PROPERTY_CHECKEDOUTBY, OdmaType.STRING, false);

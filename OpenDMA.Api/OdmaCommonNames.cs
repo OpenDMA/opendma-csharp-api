@@ -158,6 +158,23 @@ namespace OpenDMA.Api
         /// <summary>qualified name of the OpenDMA system property <c>RootFolder</c><summary>
         public static readonly OdmaQName PROPERTY_ROOTFOLDER = new OdmaQName("opendma", "RootFolder");
 
+        // -----< class AuditStamped >--------------------------------------------------------------
+
+        /// <summary>qualified name of the OpenDMA system class <c>AuditStamped</c></summary>
+        public static readonly OdmaQName CLASS_AUDITSTAMPED = new OdmaQName("opendma", "AuditStamped");
+
+        /// <summary>qualified name of the OpenDMA system property <c>CreatedAt</c><summary>
+        public static readonly OdmaQName PROPERTY_CREATEDAT = new OdmaQName("opendma", "CreatedAt");
+
+        /// <summary>qualified name of the OpenDMA system property <c>CreatedBy</c><summary>
+        public static readonly OdmaQName PROPERTY_CREATEDBY = new OdmaQName("opendma", "CreatedBy");
+
+        /// <summary>qualified name of the OpenDMA system property <c>LastModifiedAt</c><summary>
+        public static readonly OdmaQName PROPERTY_LASTMODIFIEDAT = new OdmaQName("opendma", "LastModifiedAt");
+
+        /// <summary>qualified name of the OpenDMA system property <c>LastModifiedBy</c><summary>
+        public static readonly OdmaQName PROPERTY_LASTMODIFIEDBY = new OdmaQName("opendma", "LastModifiedBy");
+
         // -----< class Document >------------------------------------------------------------------
 
         /// <summary>qualified name of the OpenDMA system class <c>Document</c></summary>
@@ -186,18 +203,6 @@ namespace OpenDMA.Api
 
         /// <summary>qualified name of the OpenDMA system property <c>PrimaryContentElement</c><summary>
         public static readonly OdmaQName PROPERTY_PRIMARYCONTENTELEMENT = new OdmaQName("opendma", "PrimaryContentElement");
-
-        /// <summary>qualified name of the OpenDMA system property <c>CreatedAt</c><summary>
-        public static readonly OdmaQName PROPERTY_CREATEDAT = new OdmaQName("opendma", "CreatedAt");
-
-        /// <summary>qualified name of the OpenDMA system property <c>CreatedBy</c><summary>
-        public static readonly OdmaQName PROPERTY_CREATEDBY = new OdmaQName("opendma", "CreatedBy");
-
-        /// <summary>qualified name of the OpenDMA system property <c>LastModifiedAt</c><summary>
-        public static readonly OdmaQName PROPERTY_LASTMODIFIEDAT = new OdmaQName("opendma", "LastModifiedAt");
-
-        /// <summary>qualified name of the OpenDMA system property <c>LastModifiedBy</c><summary>
-        public static readonly OdmaQName PROPERTY_LASTMODIFIEDBY = new OdmaQName("opendma", "LastModifiedBy");
 
         /// <summary>qualified name of the OpenDMA system property <c>CheckedOut</c><summary>
         public static readonly OdmaQName PROPERTY_CHECKEDOUT = new OdmaQName("opendma", "CheckedOut");
@@ -271,14 +276,6 @@ namespace OpenDMA.Api
         /// <summary>qualified name of the OpenDMA system property <c>Associations</c><summary>
         public static readonly OdmaQName PROPERTY_ASSOCIATIONS = new OdmaQName("opendma", "Associations");
 
-        // Property CreatedAt already defined previously
-
-        // Property CreatedBy already defined previously
-
-        // Property LastModifiedAt already defined previously
-
-        // Property LastModifiedBy already defined previously
-
         // -----< class Folder >--------------------------------------------------------------------
 
         /// <summary>qualified name of the OpenDMA system class <c>Folder</c></summary>
@@ -313,14 +310,6 @@ namespace OpenDMA.Api
 
         /// <summary>qualified name of the OpenDMA system property <c>Containable</c><summary>
         public static readonly OdmaQName PROPERTY_CONTAINABLE = new OdmaQName("opendma", "Containable");
-
-        // Property CreatedAt already defined previously
-
-        // Property CreatedBy already defined previously
-
-        // Property LastModifiedAt already defined previously
-
-        // Property LastModifiedBy already defined previously
 
     }
 

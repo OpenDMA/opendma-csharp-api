@@ -88,42 +88,6 @@ namespace OpenDMA.Api
         IOdmaContentElement? PrimaryContentElement { get; set; }
 
         /// <summary>
-        /// The timestamp when this version of this document has been created.<br/>
-        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_CREATEDAT).GetDateTime()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_CREATEDAT).Value</c>.
-        /// 
-        /// Property opendma:CreatedAt: DateTime
-        /// [SingleValue] [ReadOnly] [Optional]
-        /// </summary>
-        DateTime? CreatedAt { get; }
-
-        /// <summary>
-        /// The User who created this version of this document.<br/>
-        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_CREATEDBY).GetString()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_CREATEDBY).Value</c>.
-        /// 
-        /// Property opendma:CreatedBy: String
-        /// [SingleValue] [ReadOnly] [Optional]
-        /// </summary>
-        string? CreatedBy { get; }
-
-        /// <summary>
-        /// The timestamp when this version of this document has been modified the last time.<br/>
-        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_LASTMODIFIEDAT).GetDateTime()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_LASTMODIFIEDAT).Value</c>.
-        /// 
-        /// Property opendma:LastModifiedAt: DateTime
-        /// [SingleValue] [ReadOnly] [Optional]
-        /// </summary>
-        DateTime? LastModifiedAt { get; }
-
-        /// <summary>
-        /// The user who modified this version of this document the last time.<br/>
-        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_LASTMODIFIEDBY).GetString()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_LASTMODIFIEDBY).Value</c>.
-        /// 
-        /// Property opendma:LastModifiedBy: String
-        /// [SingleValue] [ReadOnly] [Optional]
-        /// </summary>
-        string? LastModifiedBy { get; }
-
-        /// <summary>
         /// Indicates if this document is checked out.<br/>
         /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_CHECKEDOUT).GetBoolean()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_CHECKEDOUT).Value</c>.
         /// 

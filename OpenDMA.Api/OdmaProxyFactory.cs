@@ -15,6 +15,7 @@ namespace OpenDMA.Api
             INTERFACE_DICT[OdmaCommonNames.CLASS_PROPERTYINFO] = typeof(IOdmaPropertyInfo);
             INTERFACE_DICT[OdmaCommonNames.CLASS_CHOICEVALUE] = typeof(IOdmaChoiceValue);
             INTERFACE_DICT[OdmaCommonNames.CLASS_REPOSITORY] = typeof(IOdmaRepository);
+            INTERFACE_DICT[OdmaCommonNames.CLASS_AUDITSTAMPED] = typeof(IOdmaAuditStamped);
             INTERFACE_DICT[OdmaCommonNames.CLASS_DOCUMENT] = typeof(IOdmaDocument);
             INTERFACE_DICT[OdmaCommonNames.CLASS_CONTENTELEMENT] = typeof(IOdmaContentElement);
             INTERFACE_DICT[OdmaCommonNames.CLASS_DATACONTENTELEMENT] = typeof(IOdmaDataContentElement);

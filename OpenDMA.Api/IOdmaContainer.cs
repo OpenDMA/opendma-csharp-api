@@ -38,44 +38,6 @@ namespace OpenDMA.Api
         /// </summary>
         IEnumerable<IOdmaAssociation> Associations { get; }
 
-        /// <summary>
-        /// The timestamp when this container has been created.<br/>
-        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_CREATEDAT).GetDateTime()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_CREATEDAT).Value</c>.
-        /// 
-        /// Property opendma:CreatedAt: DateTime
-        /// [SingleValue] [ReadOnly] [Optional]
-        /// </summary>
-        DateTime? CreatedAt { get; }
-
-        /// <summary>
-        /// The user who created this container.<br/>
-        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_CREATEDBY).GetString()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_CREATEDBY).Value</c>.
-        /// 
-        /// Property opendma:CreatedBy: String
-        /// [SingleValue] [ReadOnly] [Optional]
-        /// </summary>
-        string? CreatedBy { get; }
-
-        /// <summary>
-        /// The timestamp when this container has been modified the last time.<br/>
-        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_LASTMODIFIEDAT).GetDateTime()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_LASTMODIFIEDAT).Value</c>.
-        /// 
-        /// Property opendma:LastModifiedAt: DateTime
-        /// [SingleValue] [ReadOnly] [Optional]
-        /// There is no definition what counts as a modification. Some systems update this timestamp when objects are added or removed, other systems only update this timestamp when properties of this object get changed.
-        /// </summary>
-        DateTime? LastModifiedAt { get; }
-
-        /// <summary>
-        /// The user who modified this container the last time.<br/>
-        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_LASTMODIFIEDBY).GetString()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_LASTMODIFIEDBY).Value</c>.
-        /// 
-        /// Property opendma:LastModifiedBy: String
-        /// [SingleValue] [ReadOnly] [Optional]
-        /// There is no definition what counts as a modification. Some systems update this timestamp when objects are added or removed, other systems only update this timestamp when properties of this object get changed.
-        /// </summary>
-        string? LastModifiedBy { get; }
-
     }
 
 }
