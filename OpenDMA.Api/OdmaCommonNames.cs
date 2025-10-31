@@ -43,8 +43,8 @@ namespace OpenDMA.Api
         /// <summary>qualified name of the OpenDMA system property <c>SuperClass</c><summary>
         public static readonly OdmaQName PROPERTY_SUPERCLASS = new OdmaQName("opendma", "SuperClass");
 
-        /// <summary>qualified name of the OpenDMA system property <c>Aspects</c><summary>
-        public static readonly OdmaQName PROPERTY_ASPECTS = new OdmaQName("opendma", "Aspects");
+        /// <summary>qualified name of the OpenDMA system property <c>IncludedAspects</c><summary>
+        public static readonly OdmaQName PROPERTY_INCLUDEDASPECTS = new OdmaQName("opendma", "IncludedAspects");
 
         /// <summary>qualified name of the OpenDMA system property <c>DeclaredProperties</c><summary>
         public static readonly OdmaQName PROPERTY_DECLAREDPROPERTIES = new OdmaQName("opendma", "DeclaredProperties");

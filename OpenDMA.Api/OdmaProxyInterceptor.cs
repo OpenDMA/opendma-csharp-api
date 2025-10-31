@@ -38,7 +38,7 @@ namespace OpenDMA.Api
             PROPERTY_DICT["get_DisplayName"] = new PropertyMapping(OdmaCommonNames.PROPERTY_DISPLAYNAME, OdmaType.STRING, false);
             PROPERTY_DICT["set_DisplayName"] = new PropertyMapping(OdmaCommonNames.PROPERTY_DISPLAYNAME, OdmaType.STRING, false);
             PROPERTY_DICT["get_SuperClass"] = new PropertyMapping(OdmaCommonNames.PROPERTY_SUPERCLASS, OdmaType.REFERENCE, false);
-            PROPERTY_DICT["get_Aspects"] = new PropertyMapping(OdmaCommonNames.PROPERTY_ASPECTS, OdmaType.REFERENCE, true);
+            PROPERTY_DICT["get_IncludedAspects"] = new PropertyMapping(OdmaCommonNames.PROPERTY_INCLUDEDASPECTS, OdmaType.REFERENCE, true);
             PROPERTY_DICT["get_DeclaredProperties"] = new PropertyMapping(OdmaCommonNames.PROPERTY_DECLAREDPROPERTIES, OdmaType.REFERENCE, true);
             PROPERTY_DICT["get_Properties"] = new PropertyMapping(OdmaCommonNames.PROPERTY_PROPERTIES, OdmaType.REFERENCE, true);
             PROPERTY_DICT["get_Aspect"] = new PropertyMapping(OdmaCommonNames.PROPERTY_ASPECT, OdmaType.BOOLEAN, false);

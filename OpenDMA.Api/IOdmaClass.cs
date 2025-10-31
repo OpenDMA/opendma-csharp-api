@@ -55,14 +55,14 @@ namespace OpenDMA.Api
         IOdmaClass? SuperClass { get; }
 
         /// <summary>
-        /// List of aspects that are implemented by this class.<br/>
-        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_ASPECTS).GetReferenceEnumerable()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_ASPECTS).Value</c>.
+        /// List of aspects that are included in this class.<br/>
+        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_INCLUDEDASPECTS).GetReferenceEnumerable()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_INCLUDEDASPECTS).Value</c>.
         /// 
-        /// Property opendma:Aspects: Reference to Class (opendma)
+        /// Property opendma:IncludedAspects: Reference to Class (opendma)
         /// [MultiValue] [Writable] [Optional]
         /// If this object describes an Aspect, i.e. the opendma:Aspect property is true, it cannot have any Aspects itself. For classes, this set contains all elements of the opendma:Aspects set of the super class. All opendma:PropertyInfo objects contained in the opendma:Properties set of any of the opendma:Class objects in this set are also part of the opendma:Properties set of this class.
         /// </summary>
-        IEnumerable<IOdmaClass> Aspects { get; }
+        IEnumerable<IOdmaClass> IncludedAspects { get; }
 
         /// <summary>
         /// List of properties declared by this class.<br/>
