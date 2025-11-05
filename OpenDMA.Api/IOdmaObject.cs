@@ -22,6 +22,16 @@ namespace OpenDMA.Api
         IOdmaClass OdmaClass { get; }
 
         /// <summary>
+        /// References to valid aspect objects describing this object.<br/>
+        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_ASPECTS).GetReferenceEnumerable()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_ASPECTS).Value</c>.
+        /// 
+        /// Property opendma:Aspects: Reference to Class (opendma)
+        /// [MultiValue] [ReadOnly] [Optional]
+        /// The opendma:Aspects can augment the layout and features defined by opendma:Class for this object.
+        /// </summary>
+        IEnumerable<IOdmaClass> Aspects { get; }
+
+        /// <summary>
         /// The unique object identifier.<br/>
         /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_ID).GetId()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_ID).Value</c>.
         /// 

@@ -17,6 +17,9 @@ namespace OpenDMA.Api
         /// <summary>qualified name of the OpenDMA system property <c>Class</c><summary>
         public static readonly OdmaQName PROPERTY_CLASS = new OdmaQName("opendma", "Class");
 
+        /// <summary>qualified name of the OpenDMA system property <c>Aspects</c><summary>
+        public static readonly OdmaQName PROPERTY_ASPECTS = new OdmaQName("opendma", "Aspects");
+
         /// <summary>qualified name of the OpenDMA system property <c>Id</c><summary>
         public static readonly OdmaQName PROPERTY_ID = new OdmaQName("opendma", "Id");
 

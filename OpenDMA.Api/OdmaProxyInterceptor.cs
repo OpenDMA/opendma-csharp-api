@@ -28,6 +28,7 @@ namespace OpenDMA.Api
         static OdmaProxyInterceptor()
         {
             PROPERTY_DICT["get_OdmaClass"] = new PropertyMapping(OdmaCommonNames.PROPERTY_CLASS, OdmaType.REFERENCE, false);
+            PROPERTY_DICT["get_Aspects"] = new PropertyMapping(OdmaCommonNames.PROPERTY_ASPECTS, OdmaType.REFERENCE, true);
             PROPERTY_DICT["get_Id"] = new PropertyMapping(OdmaCommonNames.PROPERTY_ID, OdmaType.ID, false);
             PROPERTY_DICT["get_Guid"] = new PropertyMapping(OdmaCommonNames.PROPERTY_GUID, OdmaType.GUID, false);
             PROPERTY_DICT["get_Repository"] = new PropertyMapping(OdmaCommonNames.PROPERTY_REPOSITORY, OdmaType.REFERENCE, false);
