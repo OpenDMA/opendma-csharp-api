@@ -23,4 +23,16 @@ namespace OpenDMA.Api
         GUID = 101
     }
 
+    public enum OdmaTypeHelper
+    {
+        public static OdmaType FromString(string value)
+        {
+            if (Enum.TryParse<OdmaType>(value, ignoreCase: true, out var result))
+            {
+                return result;
+            }
+            throw new ArgumentException($"Unknown OdmaType name: '{value}'");
+        }
+    }
+
 }
