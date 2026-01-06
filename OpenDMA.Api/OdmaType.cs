@@ -23,7 +23,7 @@ namespace OpenDMA.Api
         GUID = 101
     }
 
-    public enum OdmaTypeHelper
+    public static class OdmaTypeHelper
     {
         public static OdmaType FromString(string value)
         {
