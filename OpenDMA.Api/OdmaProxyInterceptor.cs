@@ -1,6 +1,7 @@
 using Castle.DynamicProxy;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 
@@ -148,8 +149,8 @@ namespace OpenDMA.Api
             string methodName = invocation.Method.Name;
             if (methodName.Equals("get_QName"))
             {
-                object? ns = HandlePropertyGetter("get_Namespace");
-                object? name = HandlePropertyGetter("get_Name");
+                object? ns = HandlePropertyGetter("get_Namespace", typeof(string));
+                object? name = HandlePropertyGetter("get_Name", typeof(string));
                 if (ns == null || !(ns is string nsStr))
                 {
                     throw new OdmaException("Required property `opemdma:Namespace` does not have a string value.");
@@ -163,7 +164,7 @@ namespace OpenDMA.Api
             }
             else if (methodName.StartsWith("get_"))
             {
-                invocation.ReturnValue = HandlePropertyGetter(methodName);
+                invocation.ReturnValue = HandlePropertyGetter(methodName, invocation.Method.ReturnType);
             }
             else if (methodName.StartsWith("set_"))
             {
@@ -177,7 +178,7 @@ namespace OpenDMA.Api
 
         }
 
-        private object? HandlePropertyGetter(string methodName)
+        private object? HandlePropertyGetter(string methodName, Type returnType)
         {
             if (!PROPERTY_DICT.TryGetValue(methodName, out PropertyMapping? mapping))
             {
@@ -189,7 +190,7 @@ namespace OpenDMA.Api
                 var property = _coreObject.GetProperty(mapping.QName);
                 if (mapping.MultiValue)
                 {
-                    return HandleMultiValueGetter(property, mapping.Type);
+                    return HandleMultiValueGetter(property, mapping.Type, returnType);
                 }
                 else
                 {
@@ -206,7 +207,7 @@ namespace OpenDMA.Api
             }
         }
 
-        private object? HandleMultiValueGetter(IOdmaProperty property, OdmaType type)
+        private object? HandleMultiValueGetter(IOdmaProperty property, OdmaType type, Type returnType)
         {
             switch (type)
             {
@@ -229,7 +230,16 @@ namespace OpenDMA.Api
                 case OdmaType.BINARY:
                     return property.GetBinaryList();
                 case OdmaType.REFERENCE:
-                    return property.GetReferenceEnumerable();
+                    var enumerable = property.GetReferenceEnumerable();
+                    if (returnType.IsGenericType &&
+                        returnType.GetGenericTypeDefinition() == typeof(IEnumerable<>) &&
+                        returnType.GetGenericArguments()[0] != typeof(IOdmaObject))
+                    {
+                        var targetElementType = returnType.GetGenericArguments()[0];
+                        var castMethod = typeof(Enumerable).GetMethod("Cast").MakeGenericMethod(targetElementType);
+                        return castMethod.Invoke(null, new object[] { enumerable });
+                    }
+                    return enumerable;
                 case OdmaType.CONTENT:
                     return property.GetContentList();
                 case OdmaType.ID:
