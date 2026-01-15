@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;netstandard2.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <PackageId>OpenDMA.Api</PackageId>
+    <Version>0.8</Version>
+    <Authors>Stefan Kopf, OpenDMA Contributors</Authors>
+    <Company>xaldon Technologies GmbH, OpenDMA Contributors</Company>
+    <Description>C#/.NET API for OpenDMA</Description>
+    <RepositoryUrl>https://github.com/OpenDMA/opendma-csharp-api</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageTags>OpenDMA;ECM;DMS;ContentManagement</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Castle.Core" Version="5.2.1" />
+  </ItemGroup>
+
+</Project>
