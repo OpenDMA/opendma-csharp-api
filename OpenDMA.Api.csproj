@@ -2,9 +2,10 @@
 
   <PropertyGroup>
     <TargetFrameworks>net8.0;netstandard2.0</TargetFrameworks>
+    <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
     <PackageId>OpenDMA.Api</PackageId>
-    <Version>0.8</Version>
+    <Version>0.8.0-dev</Version>
     <Authors>Stefan Kopf, OpenDMA Contributors</Authors>
     <Company>xaldon Technologies GmbH, OpenDMA Contributors</Company>
     <Description>C#/.NET API for OpenDMA</Description>
@@ -19,6 +20,11 @@
 
   <ItemGroup>
     <PackageReference Include="Castle.Core" Version="5.2.1" />
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="Microsoft.Bcl.HashCode" Version="6.0.0" />
   </ItemGroup>
 
 </Project>
