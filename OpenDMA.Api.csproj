@@ -5,7 +5,7 @@
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
     <PackageId>OpenDMA.Api</PackageId>
-    <Version>0.8.0-dev</Version>
+    <Version>0.8.0</Version>
     <Authors>Stefan Kopf, OpenDMA Contributors</Authors>
     <Company>xaldon Technologies GmbH, OpenDMA Contributors</Company>
     <Description>C#/.NET API for OpenDMA</Description>
