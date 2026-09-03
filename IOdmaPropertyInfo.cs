@@ -109,6 +109,15 @@ namespace OpenDMA.Api
         bool System { get; set; }
 
         /// <summary>
+        /// Indicates if this property can be part of a filter expression.<br/>
+        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_FILTERABLE).GetBoolean()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_FILTERABLE).Value</c>.
+        /// 
+        /// Property opendma:Filterable: Boolean
+        /// [SingleValue] [ReadOnly] [Required]
+        /// </summary>
+        bool Filterable { get; }
+
+        /// <summary>
         /// List of opendma:ChoiceValue instances each describing one valid value for this property.<br/>
         /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_CHOICES).GetReferenceEnumerable()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_CHOICES).Value</c>.
         /// 

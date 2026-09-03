@@ -130,6 +130,15 @@ namespace OpenDMA.Api
         bool Searchable { get; }
 
         /// <summary>
+        /// Indicates if instances of this class can be retrieved in a full-text search expression (FTSE).<br/>
+        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_FULLTEXTSEARCHABLE).GetBoolean()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_FULLTEXTSEARCHABLE).Value</c>.
+        /// 
+        /// Property opendma:FullTextSearchable: Boolean
+        /// [SingleValue] [ReadOnly] [Required]
+        /// </summary>
+        bool FullTextSearchable { get; }
+
+        /// <summary>
         /// List of classes or aspects that extend this class.<br/>
         /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_SUBCLASSES).GetReferenceEnumerable()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_SUBCLASSES).Value</c>.
         /// 

@@ -50,6 +50,7 @@ namespace OpenDMA.Api
             PROPERTY_DICT["set_System"] = new PropertyMapping(OdmaCommonNames.PROPERTY_SYSTEM, OdmaType.BOOLEAN, false);
             PROPERTY_DICT["get_Retrievable"] = new PropertyMapping(OdmaCommonNames.PROPERTY_RETRIEVABLE, OdmaType.BOOLEAN, false);
             PROPERTY_DICT["get_Searchable"] = new PropertyMapping(OdmaCommonNames.PROPERTY_SEARCHABLE, OdmaType.BOOLEAN, false);
+            PROPERTY_DICT["get_FullTextSearchable"] = new PropertyMapping(OdmaCommonNames.PROPERTY_FULLTEXTSEARCHABLE, OdmaType.BOOLEAN, false);
             PROPERTY_DICT["get_SubClasses"] = new PropertyMapping(OdmaCommonNames.PROPERTY_SUBCLASSES, OdmaType.REFERENCE, true);
             PROPERTY_DICT["get_DataType"] = new PropertyMapping(OdmaCommonNames.PROPERTY_DATATYPE, OdmaType.INTEGER, false);
             PROPERTY_DICT["set_DataType"] = new PropertyMapping(OdmaCommonNames.PROPERTY_DATATYPE, OdmaType.INTEGER, false);
@@ -61,6 +62,7 @@ namespace OpenDMA.Api
             PROPERTY_DICT["set_Required"] = new PropertyMapping(OdmaCommonNames.PROPERTY_REQUIRED, OdmaType.BOOLEAN, false);
             PROPERTY_DICT["get_ReadOnly"] = new PropertyMapping(OdmaCommonNames.PROPERTY_READONLY, OdmaType.BOOLEAN, false);
             PROPERTY_DICT["set_ReadOnly"] = new PropertyMapping(OdmaCommonNames.PROPERTY_READONLY, OdmaType.BOOLEAN, false);
+            PROPERTY_DICT["get_Filterable"] = new PropertyMapping(OdmaCommonNames.PROPERTY_FILTERABLE, OdmaType.BOOLEAN, false);
             PROPERTY_DICT["get_Choices"] = new PropertyMapping(OdmaCommonNames.PROPERTY_CHOICES, OdmaType.REFERENCE, true);
             PROPERTY_DICT["get_StringValue"] = new PropertyMapping(OdmaCommonNames.PROPERTY_STRINGVALUE, OdmaType.STRING, false);
             PROPERTY_DICT["set_StringValue"] = new PropertyMapping(OdmaCommonNames.PROPERTY_STRINGVALUE, OdmaType.STRING, false);

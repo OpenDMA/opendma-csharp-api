@@ -70,6 +70,9 @@ namespace OpenDMA.Api
         /// <summary>qualified name of the OpenDMA system property <c>Searchable</c><summary>
         public static readonly OdmaQName PROPERTY_SEARCHABLE = new OdmaQName("opendma", "Searchable");
 
+        /// <summary>qualified name of the OpenDMA system property <c>FullTextSearchable</c><summary>
+        public static readonly OdmaQName PROPERTY_FULLTEXTSEARCHABLE = new OdmaQName("opendma", "FullTextSearchable");
+
         /// <summary>qualified name of the OpenDMA system property <c>SubClasses</c><summary>
         public static readonly OdmaQName PROPERTY_SUBCLASSES = new OdmaQName("opendma", "SubClasses");
 
@@ -102,6 +105,9 @@ namespace OpenDMA.Api
         // Property Hidden already defined previously
 
         // Property System already defined previously
+
+        /// <summary>qualified name of the OpenDMA system property <c>Filterable</c><summary>
+        public static readonly OdmaQName PROPERTY_FILTERABLE = new OdmaQName("opendma", "Filterable");
 
         /// <summary>qualified name of the OpenDMA system property <c>Choices</c><summary>
         public static readonly OdmaQName PROPERTY_CHOICES = new OdmaQName("opendma", "Choices");
