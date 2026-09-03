@@ -148,6 +148,9 @@ namespace OpenDMA.Api
         /// <summary>qualified name of the OpenDMA system class <c>Repository</c></summary>
         public static readonly OdmaQName CLASS_REPOSITORY = new OdmaQName("opendma", "Repository");
 
+        /// <summary>qualified name of the OpenDMA system property <c>RepositoryId</c><summary>
+        public static readonly OdmaQName PROPERTY_REPOSITORYID = new OdmaQName("opendma", "RepositoryId");
+
         // Property Name already defined previously
 
         // Property DisplayName already defined previously

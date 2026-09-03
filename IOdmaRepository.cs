@@ -15,6 +15,16 @@ namespace OpenDMA.Api
     {
 
         /// <summary>
+        /// Unique repository identifier.<br/>
+        /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_REPOSITORYID).GetString()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_REPOSITORYID).Value</c>.
+        /// 
+        /// Property opendma:RepositoryId: String
+        /// [SingleValue] [ReadOnly] [Required]
+        /// This identifier must be immutable during the lifetime of this repository. You can use it to refer to this repository and retrieve it again at a later time.
+        /// </summary>
+        string RepositoryId { get; }
+
+        /// <summary>
         /// The internal technical name of this repository.<br/>
         /// Shortcut for <c>GetProperty(OdmaCommonNames.PROPERTY_NAME).GetString()</c> or <c>GetProperty(OdmaCommonNames.PROPERTY_NAME).Value</c>.
         /// 

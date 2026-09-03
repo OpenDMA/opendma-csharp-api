@@ -82,6 +82,7 @@ namespace OpenDMA.Api
             PROPERTY_DICT["set_BinaryValue"] = new PropertyMapping(OdmaCommonNames.PROPERTY_BINARYVALUE, OdmaType.BINARY, false);
             PROPERTY_DICT["get_ReferenceValue"] = new PropertyMapping(OdmaCommonNames.PROPERTY_REFERENCEVALUE, OdmaType.REFERENCE, false);
             PROPERTY_DICT["set_ReferenceValue"] = new PropertyMapping(OdmaCommonNames.PROPERTY_REFERENCEVALUE, OdmaType.REFERENCE, false);
+            PROPERTY_DICT["get_RepositoryId"] = new PropertyMapping(OdmaCommonNames.PROPERTY_REPOSITORYID, OdmaType.STRING, false);
             PROPERTY_DICT["get_RootClass"] = new PropertyMapping(OdmaCommonNames.PROPERTY_ROOTCLASS, OdmaType.REFERENCE, false);
             PROPERTY_DICT["get_RootAspects"] = new PropertyMapping(OdmaCommonNames.PROPERTY_ROOTASPECTS, OdmaType.REFERENCE, true);
             PROPERTY_DICT["get_RootFolder"] = new PropertyMapping(OdmaCommonNames.PROPERTY_ROOTFOLDER, OdmaType.REFERENCE, false);
